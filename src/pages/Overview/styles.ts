@@ -46,5 +46,53 @@ export default StyleSheet.create({
     fontWeight: "bold",
     color: '#444',
     marginTop: 12
+  },
+
+  dataBox: {
+    backgroundColor: '#fff',
+    padding: 24,
+    marginTop: 96,
+    marginHorizontal: 24,
+    borderRadius: 14,
+    height: 259, 
+    alignSelf: "stretch",
+    elevation: 2
+  },
+
+  dataType: {
+    fontSize: 24,
+  },
+
+  data: {
+    height: 52,
+    alignSelf: "stretch",
+    marginBottom: 24,
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between"
+  },
+
+  buttonAndType: {
+    flexDirection: "row",
+    alignItems: "center"
+  },
+
+  button: {
+    height: 52,
+    width: 52,
+    alignItems: "center",
+    justifyContent: "center",
+    borderRadius: 26
+  },
+
+  type: {
+    fontSize: 18,
+    color: '#444',
+    marginHorizontal: 16
+  },
+
+  value: {
+    fontSize: 20,
+    color: '#444'
   }
 })

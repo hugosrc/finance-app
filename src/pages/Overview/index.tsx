@@ -32,7 +32,33 @@ const Overview: React.FC = () => {
           </View>
 
           <Text style={styles.cartValue}>$58,410</Text>
+
         </View>
+      </View>
+
+      <View style={styles.dataBox}>
+        <Text style={styles.dataType}>Overview</Text>
+
+        <TouchableOpacity activeOpacity={0.8} style={[styles.data, { marginTop: 24 }]}>
+          <View style={styles.buttonAndType}>
+            <TouchableOpacity style={[styles.button, { backgroundColor: "#F6A900" }]}>
+              <Icon name="plus" color="#fff" size={22} />
+            </TouchableOpacity>
+            <Text style={styles.type}>Incomes</Text>
+          </View>
+          <Text style={styles.value}>$25.315</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity activeOpacity={0.8} style={styles.data}>
+          <View style={styles.buttonAndType}>
+            <TouchableOpacity style={[styles.button, { backgroundColor: "#23C2AF" }]}>
+              <Icon name="minus" color="#fff" size={22} />
+            </TouchableOpacity>
+            <Text style={styles.type}>Expenses</Text>
+          </View>
+          <Text style={styles.value}>$7.315</Text>
+        </TouchableOpacity>
+
       </View>
 
       <FabButton
