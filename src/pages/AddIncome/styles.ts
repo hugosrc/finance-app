@@ -40,5 +40,31 @@ export default StyleSheet.create({
     fontWeight: "bold",
     fontSize: 18,
     color: "#fff"
+  },
+
+  input: {
+    fontSize: 22,
+    borderBottomColor: '#999',
+    borderBottomWidth: 1,
+    height: 50,
+    alignSelf: "stretch",
+    marginHorizontal: 24,
+    marginTop: 24,
+  },
+
+  dateInput: {
+    height: 50,
+    alignSelf: "stretch",
+    marginTop: 24,
+    marginHorizontal: 24,
+    justifyContent: "center",
+    borderBottomColor: '#999',
+    borderBottomWidth: 1,
+    width: '50%'
+  },
+
+  dateValue: {
+    fontSize: 22,
+    color: "#999"
   }
 })
