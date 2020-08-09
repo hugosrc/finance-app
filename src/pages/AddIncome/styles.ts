@@ -14,6 +14,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     paddingTop: 24,
     paddingHorizontal: 24,
+    elevation: 2
   },
 
   leftSide: {
