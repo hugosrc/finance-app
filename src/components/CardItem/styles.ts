@@ -26,9 +26,9 @@ export default StyleSheet.create({
   },
 
   cardValue: {
-    fontSize: 18,
+    fontSize: 20,
     color: "#444",
-    marginBottom: 18
+    marginBottom: 20
   },
 
   rightSide: {
@@ -38,7 +38,8 @@ export default StyleSheet.create({
 
   createdDate: {
     fontSize: 16,
-    textAlign: "right"
+    textAlign: "right",
+    color: '#444'
   },
 
   actionsButtons: {
