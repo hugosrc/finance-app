@@ -3,10 +3,10 @@ import { Feather as Icon } from '@expo/vector-icons';
 import { View, Text, TouchableOpacity } from 'react-native';
 import CheckBox from '@react-native-community/checkbox';
 
-import styles from './styles'
+import styles from './styles';
 
 const CardItem: React.FC = () => {
-  const [toggleCheckBox, setToggleBoxState] = useState(false)
+  const [toggleCheckBox, setToggleBoxState] = useState(false);
 
   return (
     <View style={styles.container}>
@@ -18,7 +18,7 @@ const CardItem: React.FC = () => {
         />
         <Text style={styles.description}>Adsense website</Text>
       </View>
-      
+
       <View style={styles.rightSide}>
         <View>
           <Text style={styles.createdDate}>07 Fri</Text>
@@ -35,6 +35,6 @@ const CardItem: React.FC = () => {
       </View>
     </View>
   );
-}
+};
 
 export default CardItem;

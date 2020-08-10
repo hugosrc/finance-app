@@ -1,49 +1,48 @@
-import { StyleSheet } from "react-native";
-import { timing } from "react-native-reanimated";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
     height: 98,
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     marginHorizontal: 8,
-    backgroundColor: "#fff",
+    backgroundColor: '#fff',
     elevation: 2,
     marginTop: 8,
     padding: 16,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 
   leftSide: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 
   description: {
     fontSize: 18,
-    color: "#444"
+    color: '#444',
   },
 
   cardValue: {
     fontSize: 20,
-    color: "#444",
-    marginBottom: 20
+    color: '#444',
+    marginBottom: 20,
   },
 
   rightSide: {
-    flexDirection: "row",
-    alignItems: "center",
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 
   createdDate: {
     fontSize: 16,
-    textAlign: "right",
-    color: '#444'
+    textAlign: 'right',
+    color: '#444',
   },
 
   actionsButtons: {
-    marginLeft: 12
+    marginLeft: 12,
   },
 
   actionBtn: {
@@ -53,7 +52,7 @@ export default StyleSheet.create({
     backgroundColor: '#F2994A',
     elevation: 2,
     borderRadius: 4,
-    alignItems: "center",
-    justifyContent: "center"
-  }
-})
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});

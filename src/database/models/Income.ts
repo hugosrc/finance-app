@@ -1,7 +1,6 @@
-import { uuid } from 'uuidv4'
+import { uuid } from 'uuidv4';
 
 export class Income {
-   
   public readonly id: string;
 
   public description: string;

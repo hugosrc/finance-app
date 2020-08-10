@@ -1,14 +1,17 @@
-import { createStore, applyMiddleware, Reducer, Middleware } from "redux"
-import { IncomeState, IncomeAction } from "./modules/income/types"
+import { createStore, applyMiddleware, Reducer, Middleware } from 'redux';
+import { IncomeState, IncomeAction } from './modules/income/types';
 
 export interface StoreState {
-  income: IncomeState
+  income: IncomeState;
 }
 
-export type StoreAction = IncomeAction
+export type StoreAction = IncomeAction;
 
-export default (reducers: Reducer<StoreState, StoreAction>, middlewares: Middleware[]) => {
-  const enhancer = applyMiddleware(...middlewares)
+export default (
+  reducers: Reducer<StoreState, StoreAction>,
+  middlewares: Middleware[]
+) => {
+  const enhancer = applyMiddleware(...middlewares);
 
-  return createStore(reducers, enhancer)
-}
+  return createStore(reducers, enhancer);
+};

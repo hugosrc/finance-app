@@ -1,51 +1,51 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    flex: 1
+    flex: 1,
   },
 
   header: {
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     height: 256,
     backgroundColor: '#F2994A',
     paddingTop: 64,
-    paddingHorizontal: 24
+    paddingHorizontal: 24,
   },
 
   title: {
     fontSize: 36,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     marginVertical: 16,
-    color: '#fff'
+    color: '#fff',
   },
 
   card: {
     height: 172,
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     backgroundColor: '#fff',
     elevation: 4,
     borderRadius: 14,
-    padding: 24
+    padding: 24,
   },
 
   cardHeader: {
-    flexDirection: "row",
-    justifyContent: "space-between",
-    alignItems: "center"
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
   },
 
   headerTitle: {
     fontSize: 22,
-    fontWeight: "bold",
-    color: '#444'
+    fontWeight: 'bold',
+    color: '#444',
   },
 
   cartValue: {
     fontSize: 62,
-    fontWeight: "bold",
+    fontWeight: 'bold',
     color: '#444',
-    marginTop: 12
+    marginTop: 12,
   },
 
   dataBox: {
@@ -54,9 +54,9 @@ export default StyleSheet.create({
     marginTop: 96,
     marginHorizontal: 24,
     borderRadius: 14,
-    height: 259, 
-    alignSelf: "stretch",
-    elevation: 2
+    height: 259,
+    alignSelf: 'stretch',
+    elevation: 2,
   },
 
   dataType: {
@@ -65,34 +65,34 @@ export default StyleSheet.create({
 
   data: {
     height: 52,
-    alignSelf: "stretch",
+    alignSelf: 'stretch',
     marginBottom: 24,
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between"
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 
   buttonAndType: {
-    flexDirection: "row",
-    alignItems: "center"
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 
   button: {
     height: 52,
     width: 52,
-    alignItems: "center",
-    justifyContent: "center",
-    borderRadius: 26
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: 26,
   },
 
   type: {
     fontSize: 18,
     color: '#444',
-    marginHorizontal: 16
+    marginHorizontal: 16,
   },
 
   value: {
     fontSize: 20,
-    color: '#444'
-  }
-})
+    color: '#444',
+  },
+});

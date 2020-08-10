@@ -5,13 +5,13 @@ import { useNavigation, DrawerActions } from '@react-navigation/native';
 
 import FabButton from '../../components/FabButton';
 
-import styles from './styles'
+import styles from './styles';
 
 const Overview: React.FC = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   function toggleDrawer() {
-    navigation.dispatch(DrawerActions.openDrawer())
+    navigation.dispatch(DrawerActions.openDrawer());
   }
 
   return (
@@ -32,16 +32,20 @@ const Overview: React.FC = () => {
           </View>
 
           <Text style={styles.cartValue}>$58,410</Text>
-
         </View>
       </View>
 
       <View style={styles.dataBox}>
         <Text style={styles.dataType}>Overview</Text>
 
-        <TouchableOpacity activeOpacity={0.8} style={[styles.data, { marginTop: 24 }]}>
+        <TouchableOpacity
+          activeOpacity={0.8}
+          style={[styles.data, { marginTop: 24 }]}
+        >
           <View style={styles.buttonAndType}>
-            <TouchableOpacity style={[styles.button, { backgroundColor: "#F6A900" }]}>
+            <TouchableOpacity
+              style={[styles.button, { backgroundColor: '#F6A900' }]}
+            >
               <Icon name="plus" color="#fff" size={22} />
             </TouchableOpacity>
             <Text style={styles.type}>Incomes</Text>
@@ -51,22 +55,20 @@ const Overview: React.FC = () => {
 
         <TouchableOpacity activeOpacity={0.8} style={styles.data}>
           <View style={styles.buttonAndType}>
-            <TouchableOpacity style={[styles.button, { backgroundColor: "#23C2AF" }]}>
+            <TouchableOpacity
+              style={[styles.button, { backgroundColor: '#23C2AF' }]}
+            >
               <Icon name="minus" color="#fff" size={22} />
             </TouchableOpacity>
             <Text style={styles.type}>Expenses</Text>
           </View>
           <Text style={styles.value}>$7.315</Text>
         </TouchableOpacity>
-
       </View>
 
-      <FabButton
-        pressIncome={() => {}}
-        pressExpense={() => {}}
-      />
+      <FabButton pressIncome={() => {}} pressExpense={() => {}} />
     </View>
   );
-}
+};
 
 export default Overview;

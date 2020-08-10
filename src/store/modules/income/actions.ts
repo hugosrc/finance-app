@@ -1,17 +1,17 @@
-import { action } from 'typesafe-actions'
+import { action } from 'typesafe-actions';
 
-export function addIncome({ 
+export function addIncome({
   description,
-  value, 
-  month 
+  value,
+  month,
 }: {
-  description: string,
-  value: string,
-  month: string
+  description: string;
+  value: string;
+  month: string;
 }) {
   return action('@income/ADD_REQUEST', {
     description,
     value,
-    month
-  })
+    month,
+  });
 }

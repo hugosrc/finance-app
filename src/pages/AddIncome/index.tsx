@@ -2,40 +2,40 @@ import React, { useState, useEffect } from 'react';
 import { Feather as Icon } from '@expo/vector-icons';
 import { View, TouchableOpacity, Text, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import DateTimePicker from '@react-native-community/datetimepicker'
+import DateTimePicker from '@react-native-community/datetimepicker';
 
-import styles from './styles'
+import styles from './styles';
 import { formatDate } from '../../utils/format';
 
 const AddIncome: React.FC = () => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
   const [date, setDate] = useState(new Date(Date.now()));
   const [show, setShow] = useState(false);
 
-  const [description, setDescription] = useState('')
-  const [amount, setAmount] = useState('')
-  const [formatedDate, setFormatedDate] = useState('Today')
+  const [description, setDescription] = useState('');
+  const [amount, setAmount] = useState('');
+  const [formatedDate, setFormatedDate] = useState('Today');
 
   const handleCancel = () => {
-    navigation.goBack()
-  }
+    navigation.goBack();
+  };
 
   const handleClearInputs = () => {
-    setDescription('')
-    setAmount('')
-  }
+    setDescription('');
+    setAmount('');
+  };
 
   const handleSave = () => {
-    if (!(description.length > 0 && amount.length > 0)) return
+    if (!(description.length > 0 && amount.length > 0)) return;
 
-    handleClearInputs()
+    handleClearInputs();
 
-    navigation.goBack()
-  }
+    navigation.goBack();
+  };
 
   const handleChangeVisibleModal = () => {
-    setShow(!show)
-  }
+    setShow(!show);
+  };
 
   const handleChangeDate = (event, selectedDate) => {
     const currentDate = selectedDate || date;
@@ -44,8 +44,8 @@ const AddIncome: React.FC = () => {
   };
 
   useEffect(() => {
-    setFormatedDate(formatDate(date))
-  }, [date])
+    setFormatedDate(formatDate(date));
+  }, [date]);
 
   return (
     <View style={styles.container}>
@@ -80,17 +80,15 @@ const AddIncome: React.FC = () => {
         onChangeText={setAmount}
       />
 
-      <TouchableOpacity 
-        activeOpacity={0.9} 
+      <TouchableOpacity
+        activeOpacity={0.9}
         style={styles.dateInput}
         onPress={handleChangeVisibleModal}
       >
-        <Text style={styles.dateValue}>
-          {formatedDate}
-        </Text>
+        <Text style={styles.dateValue}>{formatedDate}</Text>
       </TouchableOpacity>
 
-      { show && (
+      {show && (
         <DateTimePicker
           testID="dateTimePicker"
           value={date}
@@ -99,10 +97,9 @@ const AddIncome: React.FC = () => {
           display="default"
           onChange={handleChangeDate}
         />
-      ) }
-
+      )}
     </View>
   );
-}
+};
 
 export default AddIncome;

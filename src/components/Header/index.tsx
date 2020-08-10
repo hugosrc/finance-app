@@ -2,7 +2,7 @@ import React from 'react';
 import { Feather as Icon } from '@expo/vector-icons';
 import { View, TouchableOpacity, Text } from 'react-native';
 
-import styles from './styles'
+import styles from './styles';
 import { useNavigation } from '@react-navigation/native';
 
 interface Props {
@@ -10,11 +10,11 @@ interface Props {
 }
 
 const Header: React.FC<Props> = ({ title }) => {
-  const navigation = useNavigation()
+  const navigation = useNavigation();
 
   const handleClickBack = () => {
-    navigation.goBack()
-  }
+    navigation.goBack();
+  };
 
   return (
     <View style={styles.container}>
@@ -25,6 +25,6 @@ const Header: React.FC<Props> = ({ title }) => {
       <Text style={styles.title}>{title}</Text>
     </View>
   );
-}
+};
 
 export default Header;

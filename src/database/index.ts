@@ -1,16 +1,16 @@
-import * as SQLite from 'expo-sqlite'
+import * as SQLite from 'expo-sqlite';
 
 export const DatabaseConnection = {
-  getConnection: () => SQLite.openDatabase('database.db')
-}
+  getConnection: () => SQLite.openDatabase('database.db'),
+};
 
 export class DatabaseInit {
-  private db: SQLite.WebSQLDatabase
+  private db: SQLite.WebSQLDatabase;
 
-  constructor () {
-    this.db = DatabaseConnection.getConnection()
+  constructor() {
+    this.db = DatabaseConnection.getConnection();
 
-    this.execute()
+    this.execute();
   }
 
   private execute() {
@@ -23,16 +23,18 @@ export class DatabaseInit {
         created_at timestamp  NOT NULL  DEFAULT current_timestamp,
         updated_at timestamp  NOT NULL  DEFAULT current_timestamp,
         PRIMARY KEY (id)
-      );`
-    ]
+      );`,
+    ];
 
-    this.db.transaction(trx => {
-      for (let i = 0; i < sql.length; i++) {
-        trx.executeSql(sql[i])
+    this.db.transaction(
+      (trx) => {
+        for (let i = 0; i < sql.length; i++) {
+          trx.executeSql(sql[i]);
+        }
+      },
+      (error) => {
+        console.log(error);
       }
-    }, 
-    (error) => {
-      console.log(error)
-    })
+    );
   }
 }

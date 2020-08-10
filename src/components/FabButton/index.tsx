@@ -2,55 +2,66 @@ import React, { useState } from 'react';
 import { Feather as Icon } from '@expo/vector-icons';
 import { View, TouchableWithoutFeedback, Animated, Text } from 'react-native';
 
-import styles from './styles'
+import styles from './styles';
 
 interface Props {
-  pressIncome(): void
-  pressExpense(): void
+  pressIncome(): void;
+  pressExpense(): void;
 }
 
 const FabButton: React.FC<Props> = ({ pressIncome, pressExpense }) => {
-  const [animation, setAnimation] = useState(new Animated.Value(0))
-  const [open, setOpen] = useState(false)
+  const [animation, setAnimation] = useState(new Animated.Value(0));
+  const [open, setOpen] = useState(false);
 
   function toggleMenu() {
-    const toValue = open ? 0 : 1
+    const toValue = open ? 0 : 1;
 
     Animated.spring(animation, {
       toValue,
       friction: 6,
-      useNativeDriver: true
-    }).start()
+      useNativeDriver: true,
+    }).start();
 
-    setOpen(!open)
+    setOpen(!open);
   }
 
   const incomeStyle = {
     transform: [
       { scale: animation },
-      { translateY: animation.interpolate({ inputRange: [0, 1], outputRange: [0, -140] }) }
-    ]
-  }
+      {
+        translateY: animation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, -140],
+        }),
+      },
+    ],
+  };
 
   const expenseStyle = {
     transform: [
       { scale: animation },
-      { translateY: animation.interpolate({ inputRange: [0, 1], outputRange: [0, -70] }) }
-    ]
-  }
+      {
+        translateY: animation.interpolate({
+          inputRange: [0, 1],
+          outputRange: [0, -70],
+        }),
+      },
+    ],
+  };
 
   const rotation = {
-    transform: [{
+    transform: [
+      {
         rotate: animation.interpolate({
           inputRange: [0, 1],
-          outputRange: ["0deg", "135deg"]
-        })
-      }]
-  }
+          outputRange: ['0deg', '135deg'],
+        }),
+      },
+    ],
+  };
 
   return (
     <View style={styles.container}>
-
       <TouchableWithoutFeedback onPress={pressIncome}>
         <Animated.View style={[styles.button, styles.option, incomeStyle]}>
           <Icon name="dollar-sign" size={22} color="#fff" />
@@ -70,9 +81,8 @@ const FabButton: React.FC<Props> = ({ pressIncome, pressExpense }) => {
           <Icon name="plus" size={22} color="#fff" />
         </Animated.View>
       </TouchableWithoutFeedback>
-
     </View>
   );
-}
+};
 
 export default FabButton;

@@ -11,12 +11,12 @@ const Incomes: React.FC = () => {
       <Header title="Incomes" />
 
       <FlatList
-        data={[1,2,3,4,5,6,7]}
-        renderItem={({item}) => <CardItem/>}
-        keyExtractor={item => String(item)}
+        data={[1, 2, 3, 4, 5, 6, 7]}
+        renderItem={({ item }) => <CardItem />}
+        keyExtractor={(item) => String(item)}
       />
     </View>
   );
-}
+};
 
 export default Incomes;

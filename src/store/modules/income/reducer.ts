@@ -1,18 +1,18 @@
-import { IncomeState, IncomeAction } from "./types"
+import { IncomeState, IncomeAction } from './types';
 
 const initialState: IncomeState = {
-  incomes: []
-}
+  incomes: [],
+};
 
 export default function income(
-  state = initialState, 
+  state = initialState,
   action: IncomeAction
 ): IncomeState {
   switch (action.type) {
     case '@income/ADD_REQUEST':
-      return state
-  
+      return state;
+
     default:
-      return state
+      return state;
   }
 }

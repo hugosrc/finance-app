@@ -1,22 +1,22 @@
-import { StyleSheet } from "react-native";
+import { StyleSheet } from 'react-native';
 
 export default StyleSheet.create({
   container: {
-    alignItems: "center",
-    position: "absolute",
+    alignItems: 'center',
+    position: 'absolute',
     bottom: 120,
-    right: 80
+    right: 80,
   },
 
   button: {
-    position: "absolute",
+    position: 'absolute',
     height: 60,
     width: 60,
     borderRadius: 30,
-    justifyContent: "center",
-    alignItems: "center",
+    justifyContent: 'center',
+    alignItems: 'center',
     elevation: 2,
-    backgroundColor: '#F2994A'  
+    backgroundColor: '#F2994A',
   },
 
   option: {
@@ -24,12 +24,12 @@ export default StyleSheet.create({
     height: 48,
     borderRadius: 24,
     backgroundColor: '#F2994A',
-    flexDirection: "row",
+    flexDirection: 'row',
   },
 
   text: {
     color: '#fff',
-    fontWeight: "bold",
-    marginLeft: 8
-  }
-})
+    fontWeight: 'bold',
+    marginLeft: 8,
+  },
+});

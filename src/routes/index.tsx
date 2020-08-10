@@ -1,12 +1,12 @@
-import React from 'react'
-import { NavigationContainer } from '@react-navigation/native'
-import { createDrawerNavigator } from '@react-navigation/drawer'
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
 
-import Overview from '../pages/Overview'
-import AddIncome from '../pages/AddIncome'
-import Incomes from '../pages/Incomes'
+import Overview from '../pages/Overview';
+import AddIncome from '../pages/AddIncome';
+import Incomes from '../pages/Incomes';
 
-const Drawer = createDrawerNavigator()
+const Drawer = createDrawerNavigator();
 
 export default () => (
   <NavigationContainer>
@@ -16,4 +16,4 @@ export default () => (
       <Drawer.Screen name="incomes" component={Incomes} />
     </Drawer.Navigator>
   </NavigationContainer>
-)
+);
